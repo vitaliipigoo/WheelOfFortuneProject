@@ -1,7 +1,8 @@
 using Common;
 using Services;
 using UnityEngine;
-using Wheel_of_Luck.AssetPackage;
+using Wheel_of_Luck.Scripts.Configurations;
+using Wheel_of_Luck.Services;
 using Zenject;
 
 namespace Installers
@@ -26,6 +27,7 @@ namespace Installers
         private void BindServices()
         {
             Container.Bind<IInjectedPrefabsService>().To<InjectedPrefabsService>().AsSingle();
+            Container.Bind<IWheelOfLuckService>().To<WheelOfLuckService>().AsSingle().NonLazy();
         }
 
         private void BindMonoBehaviours()
