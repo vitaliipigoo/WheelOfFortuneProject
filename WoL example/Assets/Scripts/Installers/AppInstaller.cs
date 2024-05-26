@@ -7,7 +7,6 @@ namespace Installers
 {
     public class AppInstaller : MonoInstaller
     {
-        [SerializeField] private Transform canvas;
         [SerializeField] private LaunchButton launchButton;
         
         public override void InstallBindings()
@@ -28,8 +27,8 @@ namespace Installers
         
         private void InitGameObjectWithComponent<T>(Object prefab) where T : Component
         {
-            var target = Container.InstantiatePrefabForComponent<T>(prefab, canvas.transform);
-            DontDestroyOnLoad(target.gameObject);
+            var canvas = FindObjectOfType<Canvas>().transform;
+            Container.InstantiatePrefabForComponent<T>(prefab, canvas);
         }
     }
 }
