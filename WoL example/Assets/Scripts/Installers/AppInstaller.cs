@@ -1,6 +1,7 @@
 using Common;
 using Services;
 using UnityEngine;
+using Wheel_of_Luck.AssetPackage;
 using Zenject;
 
 namespace Installers
@@ -8,11 +9,18 @@ namespace Installers
     public class AppInstaller : MonoInstaller
     {
         [SerializeField] private LaunchButton launchButton;
+        [SerializeField] private WheelOfLuckConfiguration wofConfiguration;
         
         public override void InstallBindings()
         {
+            BindConfigurations();
             BindServices();
             BindMonoBehaviours();
+        }
+
+        private void BindConfigurations()
+        {
+            Container.BindInstance(wofConfiguration).AsSingle().NonLazy();
         }
 
         private void BindServices()

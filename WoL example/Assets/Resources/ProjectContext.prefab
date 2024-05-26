@@ -74,5 +74,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821e6fefd9f944609a751567a18454fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
   launchButton: {fileID: 6008523796941834597, guid: e66f7391215b34e3a90b393a1eab8063, type: 3}
+  wofConfiguration: {fileID: 11400000, guid: 82efe21613cf74721a7b186c5e37bef7, type: 2}
