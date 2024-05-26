@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fecd0769214036ac35354857d8966f, type: 3}
   m_Name: WheelOfLuckConfiguration
   m_EditorClassIdentifier: 
+  attempts: 5
+  isFirstAttemptFree: 1
